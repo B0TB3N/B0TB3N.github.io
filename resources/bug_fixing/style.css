@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+/* !!!https://chat.openai.com/chat/7ab25289-4c78-4ab3-b805-17bc3d45b4e4!!! */
+
+*,
+*::before
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  background: black;
+  color: 	orange;
+  font-family: "Kanit";
+  height: 100%;
+}
+
+#score_Container{
+  width: 20%;
+  margin-left: 38%;
+  margin-right: 45%;
+  height: auto;
+  text-align: center;
+  margin-top: 5%;
+}
+
+#score_Container {
+  font-size: 2rem;
+  box-shadow: inset 0 0 0.5em 0 orange, 0 0 0.5em 0 orange;
+  border: orange 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+}
+
+#frage {
+  padding: 0;
+  display: inline-block;
+  width: 50%;
+  margin-left: 23%;
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 5%
+}
+
+#frage {
+    font-size: 2rem;
+    box-shadow: inset 0 0 0.5em 0 orange, 0 0 0.5em 0 orange;
+    border: orange 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1%;
+}
+
+li {
+  display: inline-block;
+}
+
+
+.button-container {
+  text-align: center;
+  margin-bottom: 8%;
+}
+
+.button-container #button1,
+.button-container #button2,
+.button-container #button3,
+.button-container #button4 {
+  box-shadow: inset 0 0 1em 0 orange, 0 0 1em 0 orange;
+}
+
+/* neon buttons */
+
+/* -->*/
+#button1,
+#button2,
+#button3,
+#button4 {
+  font-family: "Kanit";
+
+  width: 20%;
+
+  background-color: black;
+
+  font-size: 2rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: 	orange;
+  border: orange 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow:
+  0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 red, 0 0 0.5em 0 orange;
+
+  position: relative;
+}
+
+#button1,
+#button3 {
+  margin-right: 10%;
+}
+
+#button2,
+#button4 {
+  margin-left: 10%;
+}
+
+/* ::before */
+
+#button1::before,
+#button2::before,
+#button3::before,
+#button4::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: orange;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1.5em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1.25em);
+  opacity: 0.9;
+}
+
+/* ::after */
+
+#button1::after,
+#button2::after,
+#button3::after,
+#button4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em orange;
+  opacity: 0;
+  background-color: orange;
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+/* :hover / :focus */
+
+#button1:hover,
+#button1:focus {
+  color: black;
+  text-shadow: none;
+  background-color: orange;
+}
+
+#button2:hover,
+#button2:focus {
+  color: black;
+  text-shadow: none;
+  background-color: orange;
+}
+
+#button3:hover,
+#button3:focus {
+  color: black;
+  text-shadow: none;
+  background-color: orange;
+}
+
+#button4:hover,
+#button4:focus {
+  color: black;
+  text-shadow: none;
+  background-color: orange;
+}
+
+/* :hover::before / :focus::before */
+
+#button1:hover::before,
+#button1:focus::before {
+  opacity: 1;
+}
+
+#button2:hover::before,
+#button2:focus::before {
+  opacity: 1;
+}
+
+#button3:hover::before,
+#button3:focus::before {
+  opacity: 1;
+}
+
+#button4:hover::before,
+#button4:focus::before {
+  opacity: 1;
+}
+
+/* :hover::after / :focus::after */
+
+#button1:hover::after,
+#button1:focus::after,
+#button2:hover::after,
+#button2:focus::after,
+#button3:hover::after,
+#button3:focus::after,
+#button4:hover::after,
+#button4:focus::after {
+  opacity: 1;
+  z-index: -1;
+/* <-- */
+/* Neon Tutorial by https://www.youtube.com/@KevinPowell | https://www.youtube.com/watch?v=6xNcXwC6ikQ */

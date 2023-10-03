@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>EcoCleanUp - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header class="header">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">EcoCleanUp</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="take_action.html">Take Action</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a class="active" href="appointment.html">Make an Appointment</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <h1 class="appointment_banner_txt">Make an Appointment</h1>
+        <div class="banner_img">
+            <img src="resources/appointment/appointment_banner.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="banner_responsive">
+        <h1 class="banner_txt_responsive">About EcoCleanUp</h1>
+        <div class="banner_img_responsive">
+            <img src="resources/appointment/appointment_banner_responsive.png" alt="">
+        </div>
+    </div>
+</header>
+<main>
+    <div class="icon_links">
+        <div class="take_action_block">
+            <i class="fa fa-check-circle-o" style="font-size: 100px;"></i>
+            <h1 class="take_action_block-title">Take Action</h1>
+            <p class="take_action_block-description">Find out, how YOU can help</p>
+            <a href="take_action.html" class="take_action_block-button">Take Action</a>
+
+        </div>
+        <div class="about_us_block">
+            <i class='fa fa-info-circle' style="font-size: 100px;"></i>
+            <h1 class="about_us_block-title">About Us</h1>
+            <p class="about_us_block-description">Read something about our Community-Ogranisation</p>
+            <a href="about_us.html" class="about_us_block-button">About Us</a>
+        </div>
+    </div>
+
+
+    <!-- Make an Appointment Section -->
+    <div id="appointment">
+        <div id="appointment_img">
+            <img src="resources/appointment/appointment.png" alt="">
+        </div>
+        <div id="appointment_content">
+            <h1 id="appointment_title">Make an appointment</h1>
+            <p id="appointment_txt">Make an appointment at one of our many Wastecollection-Center so you too can do your
+                part against litter in cities.</p>
+        </div>
+    </div>
+
+
+    <!-- Inputs Section -->
+
+    <div class="inputs">
+        <div class="input_left_content">
+            <p class="input_left_name">Name *</p>
+            <input type="text" class="input_field" name="username" placeholder="Enter your Full Name">
+        </div>
+
+        <div class="input_right_content">
+            <p class="input_right_name">Email</p>
+            <input type="email" name="user_email" class="input_field" placeholder="Enter your email">
+        </div>
+
+    </div>
+
+    <div class="inputs">
+        <div class="input_left_content">
+            <p class="input_left_name">Date *</p>
+            <input type="date" name="current_date" id="current_date" placeholder="YYYY-MM-DD">
+        </div>
+
+        <div class="input_right_content">
+            <p class="input_right_name">Amount of People *</p>
+            <input type="number" class="input_field" name="quantity" min="50" max="1000" step="10" value="0">
+        </div>
+    </div>
+
+    <div class="inputs">
+        <div class="input_left_content">
+            <p class="input_left_name">Country *</p>
+            <input list="countries" name="country" class="country_js" class="input_field"
+                   placeholder="Type or select a country">
+            <datalist id="countries">
+                <option value="Japan">
+                <option value="France">
+                <option value="UK">
+                <option value="United Arab Emirates">
+                <option value="Switzerland">
+                    <!-- Add more countries as needed -->
+            </datalist>
+        </div>
+
+        <div class="input_right_content">
+            <p class="input_right_name">Country *</p>
+            <input list="cities" name="city" class="city_js" class="input_field" placeholder="Type or select a city">
+            <datalist id="cities">
+                <option value="Tokyo">
+                <option value="Paris">
+                <option value="London">
+                <option value="Dubai">
+                <option value="Zurich">
+                    <!-- Add more countries as needed -->
+            </datalist>
+        </div>
+    </div>
+    <div class="inputs">
+        <div class="big_input_content">
+            <p class="big_input_name">Something else you want us to know?</p>
+            <textarea class="big_input_field" name="multilineText" rows="4" cols="50"
+                      placeholder="Add Your Text here"></textarea>
+        </div>
+    </div>
+    <div class="checkboxes">
+        <div class="checkbox">
+            <input type="checkbox" name="subscribe" id="subscribe" checked>
+            <label id="subscribe_label" for="subscribe">Subscribe to newsletter</label>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" name="email" id="email" checked>
+            <label id="email_label" for="email">Yes, I want a confirmation E-Mail</label>
+        </div>
+    </div>
+
+    <div id="submit">
+    <button class="submit"><a href="https://www.youtube.com/watch?v=7XUykt4HXns" target="_blank">Submit</a></button>
+    </div>
+</main>
+<footer>
+    <div id="footer">
+        <p id="footer_placeholder">©Ben Röthlisberger | Tie International 2023</p>
+    </div>
+</footer>
+
+<script>
+    // Get the current date in the format YYYY-MM-DD
+    const currentDate = new Date().toISOString().split('T')[0];
+
+    // Set the current date as the placeholder
+    document.getElementById('current_date').setAttribute('placeholder', currentDate);
+
+    document.addEventListener('change', function (e) {
+        if (e.target.classList.contains('country_js')) {
+            const selectedCountry = e.target.value;
+            const cityInput = document.querySelector('.city_js');
+
+            switch (selectedCountry) {
+                case 'Switzerland':
+                    cityInput.value = 'Zurich';
+                    break;
+                case 'Japan':
+                    cityInput.value = 'Tokyo';
+                    break;
+                case 'France':
+                    cityInput.value = 'Paris';
+                    break;
+                case 'UK':
+                    cityInput.value = 'London';
+                    break;
+                case 'United Arab Emirates':
+                    cityInput.value = 'Dubai';
+                    break;
+                default:
+                    // Reset the city input for other countries
+                    cityInput.value = '';
+                    break;
+            }
+        }
+    });
+
+
+</script>
+
+</body>
+</html>
