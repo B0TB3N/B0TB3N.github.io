@@ -90,9 +90,11 @@
     list-style: none;
     box-sizing: border-box;
 }
-body{
-    font-family: montserrat;
+
+body {
+    font-family: Roboto sans-serif;
 }
+
 nav{
     position: fixed;
     top: 0px;
