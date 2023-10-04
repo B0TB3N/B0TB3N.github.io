@@ -167,6 +167,34 @@
             </div>
         </div>
     </div>
+
+
+    <div class="earth-container">
+        <div class="earth"></div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const earthContainer = document.querySelector(".earth-container");
+            const earth = document.querySelector(".earth");
+            let timeout;
+
+            window.addEventListener("scroll", function () {
+                const scrollY = (window.scrollY || window.pageYOffset) / 2;
+                const rotation = `rotate(${scrollY}deg)`;
+
+                earth.style.transform = rotation;
+
+                clearTimeout(timeout);
+                earthContainer.style.opacity = "1";
+
+                timeout = setTimeout(function () {
+                    earthContainer.style.opacity = "0";
+                }, 3000);
+            });
+        });
+    </script>
 </main>
 <footer>
     <div id="footer">
