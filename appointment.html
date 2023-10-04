@@ -144,7 +144,7 @@
     </div>
 
     <div id="submit">
-    <button class="submit" id="playButton">Submit</button>
+        <button class="submit" id="playButton">Submit</button>
         <audio id="myAudio">
             <source src="resources/appointment/star_sound.mp3" type="audio/mp3">
             Your browser does not support the audio element.
@@ -166,36 +166,38 @@
     var audio = document.getElementById('myAudio');
     var playButton = document.getElementById('playButton');
 
-    playButton.addEventListener('click', function() {
+    playButton.addEventListener('click', function () {
         if (audio.paused) {
+            audio.loop = true; // Setzt die Wiederholung auf unendlich
             audio.play();
             playButton.innerHTML = 'Pause Sound';
         } else {
             audio.pause();
             audio.currentTime = 0; // Setzt die Wiedergabe auf den Anfang zurück
+            audio.loop = false; // Beendet die Wiederholung
             playButton.innerHTML = 'Submit';
         }
     });
 
 
-        document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
         const earthContainer = document.querySelector(".earth-container");
         const earth = document.querySelector(".earth");
         let timeout;
 
         window.addEventListener("scroll", function () {
-        const scrollY = (window.scrollY || window.pageYOffset) / 2;
-        const rotation = `rotate(${scrollY}deg)`;
+            const scrollY = (window.scrollY || window.pageYOffset) / 2;
+            const rotation = `rotate(${scrollY}deg)`;
 
-        earth.style.transform = rotation;
+            earth.style.transform = rotation;
 
-        clearTimeout(timeout);
-        earthContainer.style.opacity = "1";
+            clearTimeout(timeout);
+            earthContainer.style.opacity = "1";
 
-        timeout = setTimeout(function () {
-        earthContainer.style.opacity = "0";
-    }, 3000);
-    });
+            timeout = setTimeout(function () {
+                earthContainer.style.opacity = "0";
+            }, 3000);
+        });
     });
 
     // Get the current date in the format YYYY-MM-DD
