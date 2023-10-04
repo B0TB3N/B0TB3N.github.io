@@ -163,14 +163,18 @@
 </footer>
 
 <script>
-    document.getElementById('playButton').addEventListener('click', function() {
-        var audio = document.getElementById('myAudio');
-        audio.play();
+    var audio = document.getElementById('myAudio');
+    var playButton = document.getElementById('playButton');
 
-        var stopTimeout = setTimeout(function() {
+    playButton.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+            playButton.innerHTML = 'Pause Sound';
+        } else {
             audio.pause();
-            audio.currentTime = 0; // Setze die Wiedergabezeit auf den Anfang zurück
-        }, 5000);
+            audio.currentTime = 0; // Setzt die Wiedergabe auf den Anfang zurück
+            playButton.innerHTML = 'Play Sound';
+        }
     });
 
 
