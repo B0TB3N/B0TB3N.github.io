@@ -501,7 +501,7 @@ a.active,a:hover{
     }
 
     .earth-container {
-        top: 80px;
+        bottom:90px;
         left: 0;
     }
 }
