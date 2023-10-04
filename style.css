@@ -495,3 +495,24 @@ a.active,a:hover{
         font-size: 8vw;
     }
 }
+
+
+/* Features */
+
+/* Earth */
+
+.earth-container {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.earth {
+    width: 100px; /* Ändere die Größe nach Bedarf */
+    height: 100px; /* Ändere die Größe nach Bedarf */
+    background: url('resources/feature/earth/earth.png') center center no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
