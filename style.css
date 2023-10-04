@@ -499,6 +499,11 @@ a.active,a:hover{
        width: 20vw;
         height: 20vw;
     }
+
+    .earth-container {
+        top: 80px;
+        left: 0;
+    }
 }
 
 
