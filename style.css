@@ -494,6 +494,11 @@ a.active,a:hover{
     #footer_placeholder {
         font-size: 8vw;
     }
+
+    .earth {
+       width: 20vw;
+        height: 20vw;
+    }
 }
 
 
@@ -510,8 +515,8 @@ a.active,a:hover{
 }
 
 .earth {
-    width: 100px; /* Ändere die Größe nach Bedarf */
-    height: 100px; /* Ändere die Größe nach Bedarf */
+    width: 7vw; /* Ändere die Größe nach Bedarf */
+    height: 7vw;
     background: url('resources/feature/earth/earth.png') center center no-repeat;
     background-size: cover;
     border-radius: 50%;
