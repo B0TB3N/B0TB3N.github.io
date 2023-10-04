@@ -144,7 +144,11 @@
     </div>
 
     <div id="submit">
-    <button class="submit"><a href="https://www.youtube.com/watch?v=7XUykt4HXns" target="_blank">Submit</a></button>
+    <button class="submit" id="playButton">Submit</button>
+        <audio id="myAudio">
+            <source src="resources/appointment/star_sound.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
 
@@ -159,6 +163,16 @@
 </footer>
 
 <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var audio = document.getElementById('myAudio');
+        audio.play();
+
+        var stopTimeout = setTimeout(function() {
+            audio.pause();
+            audio.currentTime = 0; // Setze die Wiedergabezeit auf den Anfang zurück
+        }, 5000);
+    });
+
 
         document.addEventListener("DOMContentLoaded", function () {
         const earthContainer = document.querySelector(".earth-container");
