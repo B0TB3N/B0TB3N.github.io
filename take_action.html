@@ -262,8 +262,8 @@
 
             // Überprüfe, ob die eingegebene Sequenz dem Konami-Code entspricht
             if (konamiCode.toString().indexOf(konamiSequence) >= 0) {
-                // Hier kannst du deine Aktion einfügen, z.B. eine versteckte Nachricht anzeigen
-                alert("Cheat-Code active!");
+                // Body ausblenden
+                document.body.style.display = "none";
                 // Zurücksetzen des Codes
                 konamiCode = [];
             }
