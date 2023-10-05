@@ -196,6 +196,32 @@
                 }, 3000);
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Array mit lustigen Katzenfakten
+            var catFacts = [
+                "Katzen können bis zu 50 verschiedene Laute von sich geben.",
+                "Eine Gruppe von Katzen nennt man Klaue.",
+                "Katzen verbringen durchschnittlich 70-80% ihres Lebens mit Schlafen.",
+                "Die längste bekannte Lebensdauer einer Katze beträgt 38 Jahre.",
+                "Katzen schnurren nicht nur, wenn sie glücklich sind, sondern auch, um Schmerzen zu lindern und zu heilen. Der Klangfrequenzbereich des Schnurrens kann tatsächlich Heilung fördern.",
+                "Jede Katze hat ein einzigartiges Muster von Haaren in ihren Ohren, vergleichbar mit einem Fingerabdruck bei Menschen.\n" +
+                "\n" +
+                "Die Schnurrhaare einer Katze sind extrem empfindlich. Wenn eine Katze zu viele Informationen auf einmal aufnimmt, kann dies zu Whisker Fatigue führen.",
+                "Egal wie teuer das Katzenspielzeug ist, viele Katzen finden einen Karton genauso interessant, wenn nicht interessanter.",
+                "Katzen haben die Fähigkeit, sich schnell zu bewegen und auf kurze Distanzen große Sprünge zu machen, was sie zu hochleistungsfähigen Jägern macht.",
+                "Katzen können ihre Ohren fast vollständig in jede Richtung drehen, was ihnen ein erstaunliches Hörvermögen verleiht.",
+                "Jede Katze hat ein einzigartiges Nasenmuster, vergleichbar mit einem Fingerabdruck bei Menschen.",
+                "Katzen suchen oft kleine, geschützte Orte, um sich zu verstecken oder auszuruhen. Das stammt aus ihrer Natur als Beutetiere.",
+                "Die meisten Katzen mögen kein Wasser, aber es gibt Rassen wie die Türkisch Van, die das Schwimmen genießen. Katzen haben im Allgemeinen jedoch Angst vor Wasser."
+            ];
+
+            // Zufällige Auswahl einer Katzentatsache
+            var randomFact = catFacts[Math.floor(Math.random() * catFacts.length)];
+
+            // Ausgabe der Tatsache in der Konsole
+            console.log("Lustige Katzenfakten: " + randomFact);
+        });
     </script>
 </main>
 <footer>
