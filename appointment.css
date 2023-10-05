@@ -310,4 +310,28 @@ button {
     #footer_placeholder {
         font-size: 8vw;
     }
+
+    .input_right_name {
+        font-size: 4vw;
+    }
+
+    .input_left_name {
+        font-size: 4vw;
+    }
+
+    .big_input_name {
+        font-size: 5vw;
+    }
+
+    .big_input_field {
+        font-size: 4vw;
+    }
+
+    .city_js {
+        font-size: 3vw;
+    }
+
+    .country_js {
+        font-size: 3vw;
+    }
 }
