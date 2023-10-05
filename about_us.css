@@ -281,6 +281,17 @@
         font-size: 10vw;
         width: 80vw;
     }
+
+    .spots_name {
+        font-size: 7vw;
+    }
+
+    .img_btn_container .spot_button {
+        top: 80%;
+        font-size: 4vw;
+        padding: 5px 10px;
+    }
+
     #footer {
         height: 25vw;
     }
