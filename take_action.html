@@ -254,6 +254,7 @@
         });
 
 
+        // Konami-Code
         var konamiCode = [];
         var konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]; // Pfeiltasten: Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
 
@@ -262,12 +263,23 @@
 
             // Überprüfe, ob die eingegebene Sequenz dem Konami-Code entspricht
             if (konamiCode.toString().indexOf(konamiSequence) >= 0) {
-                // Body ausblenden
-                document.body.style.display = "none";
-                // Zurücksetzen des Codes
-                konamiCode = [];
+                // Wenn der Code erfolgreich eingegeben wurde
+                if (konamiCode.length === konamiSequence.length) {
+                    toggleBodyVisibility();
+                    // Zurücksetzen des Codes nach einer kurzen Verzögerung
+                    setTimeout(function() {
+                        konamiCode = [];
+                    }, 1000);
+                }
             }
         });
+
+        function toggleBodyVisibility() {
+            var currentDisplayStyle = document.body.style.display;
+            // Wenn der Body sichtbar ist, ausblenden; sonst, einblenden
+            document.body.style.display = currentDisplayStyle === "none" ? "block" : "none";
+        }
+
     </script>
 </main>
 <footer>
