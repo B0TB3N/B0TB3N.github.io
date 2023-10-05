@@ -252,6 +252,22 @@
             // Ausgabe der Tatsache in der Konsole
             console.log("Lustige Katzenfakten: " + randomFact);
         });
+
+
+        var konamiCode = [];
+        var konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]; // Pfeiltasten: Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
+
+        document.addEventListener("keydown", function(event) {
+            konamiCode.push(event.keyCode);
+
+            // Überprüfe, ob die eingegebene Sequenz dem Konami-Code entspricht
+            if (konamiCode.toString().indexOf(konamiSequence) >= 0) {
+                // Hier kannst du deine Aktion einfügen, z.B. eine versteckte Nachricht anzeigen
+                alert("Cheat-Code active!");
+                // Zurücksetzen des Codes
+                konamiCode = [];
+            }
+        });
     </script>
 </main>
 <footer>
