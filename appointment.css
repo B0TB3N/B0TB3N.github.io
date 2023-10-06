@@ -350,7 +350,7 @@ button {
 
 .placeholder {
     position: absolute;
-    top: 35%;
+    top: 2.5vh;
     font-size: 2vw;
     padding: 0px 5px;
     color: #666;
