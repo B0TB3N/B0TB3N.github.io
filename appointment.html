@@ -71,92 +71,99 @@
 
 
     <!-- Inputs Section -->
+    <div id="inputs">
+        <div class="input_row">
+            <div class="input-group">
+                <div class="input_left_content">
+                    <input type="text" class="input input_field" name="username" placeholder=" ">
+                    <label class="placeholder">Enter your Full Name *</label>
+                </div>
+            </div>
 
-    <div class="inputs">
-        <div class="input_left_content">
-            <p class="input_left_name">Name *</p>
-            <input type="text" class="input_field" name="username" placeholder="Enter your Full Name">
+            <div class="input-group">
+                <div class="input_right_content">
+                    <input type="email" name="user_email" class="input input_field" placeholder=" ">
+                    <label class="placeholder">Enter your email *</label>
+                </div>
+            </div>
         </div>
+        <div class="input_row">
 
-        <div class="input_right_content">
-            <p class="input_right_name">Email</p>
-            <input type="email" name="user_email" class="input_field" placeholder="Enter your email">
+        <div class="input-group">
+                <div class="input_left_content">
+                    <input type="date" name="current_date" id="current_date" class="input input_field" placeholder=" ">
+                    <label class="placeholder">Date *</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="input_right_content">
+                    <input type="number" class="input input_field" name="quantity" min="10" max="1000" step="10"
+                           value="0" placeholder=" ">
+                    <label class="placeholder">Amount of People *</label>
+                </div>
+            </div>
         </div>
+            <div class="input-group">
+                <div class="input_left_content">
+                    <input list="countries" name="country" class="country_js input input_field" placeholder=" ">
+                    <datalist id="countries">
+                        <option value="Japan"></option>
+                        <option value="France"></option>
+                        <option value="UK"></option>
+                        <option value="United Arab Emirates"></option>
+                        <option value="Switzerland"></option>
+                    </datalist>
+                    <label class="placeholder">Type or select a country *</label>
+                </div>
+            </div>
 
+            <div class="input-group">
+                <div class="input_right_content">
+                    <input list="cities" name="city" class="city_js input input_field" placeholder=" ">
+                    <datalist id="cities">
+                        <option value="Tokyo"></option>
+                        <option value="Paris"></option>
+                        <option value="London"></option>
+                        <option value="Dubai"></option>
+                        <option value="Zurich"></option>
+                    </datalist>
+                    <label class="placeholder">Type or select a city *</label>
+                </div>
+            </div>
     </div>
+            <div class="input-group">
+                <div class="big_input_content">
+                    <textarea class="big_input_field input" name="multilineText" rows="4" cols="50"
+                              placeholder=" "></textarea>
+                    <label class="placeholder">Something else you want us to know?</label>
+                </div>
+            </div>
+        </div>
+        <div class="checkboxes">
+            <div class="checkbox">
+                <input type="checkbox" name="subscribe" id="subscribe" checked>
+                <label id="subscribe_label" for="subscribe">Subscribe to newsletter</label>
+            </div>
 
-    <div class="inputs">
-        <div class="input_left_content">
-            <p class="input_left_name">Date *</p>
-            <input type="date" name="current_date" id="current_date" placeholder="YYYY-MM-DD">
+            <div class="checkbox">
+                <input type="checkbox" name="email" id="email" checked>
+                <label id="email_label" for="email">Yes, I want a confirmation E-Mail</label>
+            </div>
         </div>
 
-        <div class="input_right_content">
-            <p class="input_right_name">Amount of People *</p>
-            <input type="number" class="input_field" name="quantity" min="50" max="1000" step="10" value="0">
-        </div>
-    </div>
-
-    <div class="inputs">
-        <div class="input_left_content">
-            <p class="input_left_name">Country *</p>
-            <input list="countries" name="country" class="country_js" class="input_field"
-                   placeholder="Type or select a country">
-            <datalist id="countries">
-                <option value="Japan">
-                <option value="France">
-                <option value="UK">
-                <option value="United Arab Emirates">
-                <option value="Switzerland">
-                    <!-- Add more countries as needed -->
-            </datalist>
+        <div id="submit">
+            <button class="submit" id="playButton">Submit</button>
+            <audio id="myAudio">
+                <source src="resources/appointment/star_sound.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
         </div>
 
-        <div class="input_right_content">
-            <p class="input_right_name">City *</p>
-            <input list="cities" name="city" class="city_js" class="input_field" placeholder="Type or select a city">
-            <datalist id="cities">
-                <option value="Tokyo">
-                <option value="Paris">
-                <option value="London">
-                <option value="Dubai">
-                <option value="Zurich">
-                    <!-- Add more countries as needed -->
-            </datalist>
+
+        <div class="earth-container">
+            <div class="earth"></div>
         </div>
-    </div>
-    <div class="inputs">
-        <div class="big_input_content">
-            <p class="big_input_name">Something else you want us to know?</p>
-            <textarea class="big_input_field" name="multilineText" rows="4" cols="50"
-                      placeholder="Add Your Text here"></textarea>
-        </div>
-    </div>
-
-    <div class="checkboxes">
-        <div class="checkbox">
-            <input type="checkbox" name="subscribe" id="subscribe" checked>
-            <label id="subscribe_label" for="subscribe">Subscribe to newsletter</label>
-        </div>
-
-        <div class="checkbox">
-            <input type="checkbox" name="email" id="email" checked>
-            <label id="email_label" for="email">Yes, I want a confirmation E-Mail</label>
-        </div>
-    </div>
-
-    <div id="submit">
-        <button class="submit" id="playButton">Submit</button>
-        <audio id="myAudio">
-            <source src="resources/appointment/star_sound.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-
-
-    <div class="earth-container">
-        <div class="earth"></div>
-    </div>
 </main>
 <footer>
     <div id="footer">
@@ -237,7 +244,7 @@
         }
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         // Array mit lustigen Katzenfakten
         var catFacts = [
             "Katzen können bis zu 50 verschiedene Laute von sich geben.",
@@ -267,7 +274,7 @@
     var konamiCode = [];
     var konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]; // Pfeiltasten: Up, Up, Down, Down, Left, Right, Left, Right, B, A, Enter
 
-    document.addEventListener("keydown", function(event) {
+    document.addEventListener("keydown", function (event) {
         konamiCode.push(event.keyCode);
 
         // Überprüfe, ob die eingegebene Sequenz dem Konami-Code entspricht
@@ -276,7 +283,7 @@
             if (konamiCode.length === konamiSequence.length) {
                 toggleBodyVisibility();
                 // Zurücksetzen des Codes nach einer kurzen Verzögerung
-                setTimeout(function() {
+                setTimeout(function () {
                     konamiCode = [];
                 }, 1000);
             }
@@ -288,8 +295,6 @@
         // Wenn der Body sichtbar ist, ausblenden; sonst, einblenden
         document.body.style.display = currentDisplayStyle === "none" ? "block" : "none";
     }
-
-
 
 
 </script>

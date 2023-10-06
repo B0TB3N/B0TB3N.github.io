@@ -52,23 +52,17 @@
 
 
 .input_right_content {
-    width: 40%;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-rigth: 5%;
-    margin-left: 5%;
 }
 
 .input_left_content {
-    width: 40%;
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
-    margin-left: 5%;
-    margin-right: 5%;
+    flex-direction: column;;
 }
 
 .input_right_name {
@@ -112,7 +106,7 @@ input {
 input:focus {
     outline: none;
     border-color: #009639;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    box-shadow: 0 0 5px rgba(0, 150, 57, 0.5);
 }
 
 .country_js {
@@ -132,17 +126,13 @@ input:focus {
 }
 
 .big_input_content {
-    width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
 .big_input_field {
-    width: 90vw;
     height: 20vh;
     font-size: 2vw;
     border-radius: 1vh;
@@ -341,4 +331,52 @@ button {
     .country_js {
         font-size: 3vw;
     }
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #04AA6D;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.placeholder {
+    position: absolute;
+    top: 35%;
+    font-size: 2vw;
+    padding: 0px 5px;
+    color: #666;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Neu hinzugefügte Stile für die Platzhalter innerhalb der Inputs */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input:focus + .placeholder,
+.input:not(:placeholder-shown) + .placeholder {
+    top: -10px;
+    color: white;
+    background-color: rgba(0, 150, 57, 0.9);
+    border-radius: 1vh;
+    box-shadow: 0 0 5px rgba(0, 150, 57, 0.9);
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
