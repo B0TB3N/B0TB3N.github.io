@@ -237,6 +237,52 @@ button {
     font-size: 4vw;
 }
 
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #04AA6D;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.placeholder {
+    position: absolute;
+    top: 2.5vh;
+    font-size: 2vw;
+    padding: 0px 5px;
+    color: #666;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Neu hinzugefügte Stile für die Platzhalter innerhalb der Inputs */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input:focus + .placeholder,
+.input:not(:placeholder-shown) + .placeholder {
+    top: -10px;
+    color: white;
+    background-color: rgba(0, 150, 57, 0.9);
+    border-radius: 1vh;
+    box-shadow: 0 0 5px rgba(0, 150, 57, 0.9);
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (max-width: 858px) {
 
@@ -308,75 +354,22 @@ button {
         font-size: 8vw;
     }
 
-    .input_right_name {
-        font-size: 4vw;
+    .input:focus + .placeholder,
+    .input:not(:placeholder-shown) + .placeholder {
+        top: -5px;
+        color: white;
+        background-color: rgba(0, 150, 57, 0.9);
+        border-radius: 1vh;
+        box-shadow: 0 0 5px rgba(0, 150, 57, 0.9);
     }
 
-    .input_left_name {
+    .placeholder {
         font-size: 4vw;
-    }
-
-    .big_input_name {
-        font-size: 5vw;
     }
 
     .big_input_field {
-        font-size: 4vw;
-    }
-
-    .city_js {
-        font-size: 3vw;
-    }
-
-    .country_js {
-        font-size: 3vw;
+        width: 80vw;
     }
 }
 
 
-.input-group {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.input {
-    padding: 10px;
-    box-sizing: border-box;
-    outline: none;
-    border: 1px solid #04AA6D;
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.placeholder {
-    position: absolute;
-    top: 2.5vh;
-    font-size: 2vw;
-    padding: 0px 5px;
-    color: #666;
-    transform: translateY(-50%);
-    transition: 0.3s;
-    pointer-events: none;
-}
-
-/* Neu hinzugefügte Stile für die Platzhalter innerhalb der Inputs */
-.input-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.input:focus + .placeholder,
-.input:not(:placeholder-shown) + .placeholder {
-    top: -10px;
-    color: white;
-    background-color: rgba(0, 150, 57, 0.9);
-    border-radius: 1vh;
-    box-shadow: 0 0 5px rgba(0, 150, 57, 0.9);
-}
-
-#inputs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
