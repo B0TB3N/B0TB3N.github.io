@@ -88,7 +88,7 @@
     height: 5vh;
     font-size: 2vw;
     border-radius: 1vh;
-   color: #009639;
+    color: #009639;
 }
 
 #current_date {
@@ -148,6 +148,13 @@ input:focus {
     border-radius: 1vh;
     color: #009639;
 }
+
+.big_input_name {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 10px;
+}
+
 
 .checkboxes {
     margin-top: 5%;
